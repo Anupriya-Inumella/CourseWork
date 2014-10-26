@@ -1,0 +1,151 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+
+An Entry E on Stack STK:
+
+
+[  OPEN LIST     ,   REMAINING SENTENCE  , REMAINING RULES   ]
+
+
+-------------------------------------------------
+
+Procedures:
+
+// Returns top element of the stack
+top(STK)   ->  E    
+
+// Pops the top element of the stack
+pop(STK)   ->  E
+
+// The open list associated with element E of the stack
+E.openList -> L 
+
+// Remaining sentence associated with element E
+E.remSent  -> SEN
+
+// Remaining rules associated with element E
+E.remRules -> R   
+
+// Get first element of the open list  L
+first(L) ->  NODE 
+If L = "NP VP" ,  first(L) -> NP
+
+// First word of the remaining sentence SEN
+firstS(SEN) -> WORD
+If SEN = "does that ...",  then  first(SEN) -> does
+
+// Returns 1 if NODE is a pre-terminal
+preTerm(NODE) -> 0/1   
+
+// If pre-terminal NODE is a valid pre-terminal of  WORD
+match(NODE,WORD) -> 0/1  
+
+// First remaning rule RULE is removed for the set of rules associated 
+// with stack element E
+removeFirstRule(E.remRules) -> RULE 
+
+// Consume first element of the open list
+consumeFirstOpen(E.openList)
+
+// Consume first word of the remaining sentence
+consumeFirstSen(E.remSent);
+
+// Check if the stack is not empty
+nonEmpty(STK)
+
+-------------------------------------------------
+
+Pseudo Code:
+
+
+STK = null
+E = [ S , Sentence to be parsed , Rules(S)  ]
+push(STK,E)
+
+do while(nonEmpty(STK)) 
+{
+
+
+	TOP_E = top(S)
+
+	// Check if the top element E of the stack STK has empty open list
+	// and empty remaining sentence, if YES, return SUCESS
+	if(TOP_E.openList == empty && TOP_E.remSent == nil) 
+	{
+		return (SUCCESS) 
+
+		// Print Final Stack State
+		printStack(STK)
+	}
+	// If open list is empty but the remaining sentence is not empty
+	// It means you have ended your search but not consumed the entire
+	// sentence
+	// BACKTRACK
+	elsif(TOP_E.openList == empty && TOP_E.remSent != nil) 
+	{
+		pop(STK)	
+	}
+	// If open list is not empty but remaining sentence is empty
+	// BACKTRACK
+	elsif(TOP_E.openList != empty && TOP_E.remSent == nil) 
+	{
+		pop(STK);
+	}
+	// If first element of the open list of TOP_E is pre-terminal
+	// CONSUME
+	elsif(preTerm(first(TOP_E.openList))) 
+	{
+
+		if(match(first(NEWTOP_E.openList),firstS(NEWTOP_E.remSent)))
+		{
+			//Copy the Top element TOP_E to NEWTOP_E
+			copy(NEWTOP_E, TOP_E)
+			NEWTOP_E.remRules = empty
+
+			consumeFirstOpen(NEWTOP_E.openList)			
+			consumeFirstSen(NEWTOP_E.remSent)
+
+			// If first element of the expanded open list is non-terminal
+			// Add its rules to the set of remaining rulees
+			NEWTOP_E.remRules = Rules(first(NEWTOP_E.openList))
+
+			// Push NEWTOP to the top now
+			push(STK, NEWTOP_E)
+		}
+		else
+		{
+			// BACKTRACK
+			pop(STK)
+		}
+
+	}
+	// If the first element of the open list is a non-terminal
+	// PREDICT ie.., expand it using a rule
+	else 
+	{
+
+		// Get and Remove the first remaining rule from the list of remaining rules
+		RULEFIRST = removeFirstRule(TOP_E.remRules)
+
+		//Copy the Top element TOP_E to NEWTOP_E
+		copy(NEWTOP_E, TOP_E)
+		NEWTOP_E.remRules = empty
+
+		// Expand the first element of open list of NEWTOP_E using RULEFIRST
+		expandFirst(NEWTOP_E.openList,RULEFIRST)	
+
+		// If first element of the expanded open list is non-terminal
+		// Add its rules to the set of remaining rulees
+		NEWTOP_E.remRules = Rules(first(NEWTOP_E.openList))
+		
+		push(STK,NEWTOP_E)
+		
+	}
+	
+	// PRINT THE STATE OF THE STACK
+	printStack(STK)
+
+}
+

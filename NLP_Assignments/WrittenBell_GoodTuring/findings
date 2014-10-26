@@ -1,0 +1,106 @@
+						ASSIGNMENT-3
+Witten-bell:
+------------
+
+bigram  The,measure  newcount  0.0105065955926  discountprob  0.000309017517431
+bigram  measure,drew  discountprob  0.000624609618988
+bigram  drew,criticism  discountprob  0.000624609618988
+bigram  criticism,from  discountprob  0.000624609618988
+bigram  from,the  newcount  3.28301886792 discountprob  0.11320754717  discount  0.547169811321
+bigram  the,Bush  newcount  0.0757358049643  discountprob  0.000285795490431
+bigram  Bush,administration  discountprob  0.000624609618988
+bigram  administration,and  discountprob  0.000624609618988
+bigram  and,a  newcount  1.05511811024 discountprob  0.0157480314961  discount  0.527559055118
+bigram  a,parting  newcount  0.029619922299  discountprob  0.000282094498086
+bigram  parting,shot  discountprob  0.000624609618988
+bigram  shot,from  discountprob  0.000624609618988
+bigram  from,financier  newcount  0.00832725140881  discountprob  0.000287146600304
+bigram  financier,Donald  discountprob  0.000624609618988
+bigram  Donald,Trump  discountprob  0.000624609618988
+bigram  Trump,who  discountprob  0.000624609618988
+bigram  who,yesterday  newcount  0.00392699811202  discountprob  0.000302076777848
+bigram  yesterday,withdrew  newcount  0.00374737945493  discountprob  0.000288259958071
+bigram  withdrew,his  discountprob  0.000624609618988
+bigram  his,takeover  newcount  0.00329232887372  discountprob  0.000299302624884
+bigram  takeover,bid  newcount  0.0003125  discountprob  0.0003125
+bigram  bid,for  newcount  0.5 discountprob  0.5  discount  0.5
+bigram  for,AMR  newcount  0.0075357576659  discountprob  0.000235492427059
+bigram  AMR,Corp  discountprob  0.000624609618988
+bigram  Corp,the  newcount  0.0015664160401  discountprob  0.00031328320802
+bigram  the,parent  newcount  0.0757358049643  discountprob  0.000285795490431
+bigram  parent,of  newcount  0.5 discountprob  0.5  discount  0.5
+bigram  of,American  newcount  0.0206411273302  discountprob  0.000231922778992
+bigram  American,Airlines  newcount  0.000625390869293  discountprob  0.000312695434647
+
+total 3657
+newcount..!! [0.0013381289792244243, 0.09751824817518248, 0.8802395209580838, 1.3061224489795917]
+
+Good-turing:
+------------
+
+bigram  The,measure  newcount  0.00133812897922  discountprob  3.93567346831e-05
+bigram  measure,drew  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  drew,criticism  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  criticism,from  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  from,the  actualprob(r>4)  0.206896551724
+bigram  the,Bush  newcount  0.00133812897922  discountprob  5.04954331783e-06
+bigram  Bush,administration  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  administration,and  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  and,a  newcount  0.880239520958  discountprob  0.0131379032979  discount  0.440119760479
+bigram  a,parting  newcount  0.00133812897922  discountprob  1.27440855164e-05
+bigram  parting,shot  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  shot,from  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  from,financier  newcount  0.00133812897922  discountprob  4.61423785939e-05
+bigram  financier,Donald  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  Donald,Trump  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  Trump,who  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  who,yesterday  newcount  0.00133812897922  discountprob  0.000102932998402
+bigram  yesterday,withdrew  newcount  0.00133812897922  discountprob  0.000102932998402
+bigram  withdrew,his  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  his,takeover  newcount  0.00133812897922  discountprob  0.00012164808902
+bigram  takeover,bid  newcount  0.00133812897922  discountprob  0.00133812897922
+bigram  bid,for  newcount  0.0975182481752  discountprob  0.0975182481752  discount  0.0975182481752
+bigram  for,AMR  newcount  0.00133812897922  discountprob  4.18165306008e-05
+bigram  AMR,Corp  newcount  0.00133812897922 discountprob  8.3580823187e-07
+bigram  Corp,the  newcount  0.00133812897922  discountprob  0.000267625795845
+bigram  the,parent  newcount  0.00133812897922  discountprob  5.04954331783e-06
+bigram  parent,of  newcount  0.0975182481752  discountprob  0.0975182481752  discount  0.0975182481752
+bigram  of,American  newcount  0.00133812897922  discountprob  1.50351570699e-05
+bigram  American,Airlines  newcount  0.00133812897922  discountprob  0.000669064489612
+
+bid,for    discount   [0.5, 0.03916768665850673, 0.09751824817518248]
+and,a    discount   [0.5275590551181102, 0.0922671353251318, 0.4401197604790419]
+Bush,administration    discount   [0, 0, 0]
+Corp,the    discount   [0, 0, 0]
+shot,from    discount   [0, 0, 0]
+withdrew,his    discount   [0, 0, 0]
+American,Airlines    discount   [0, 0, 0]
+a,parting    discount   [0, 0, 0]
+parent,of    discount   [0.5, 0.10526315789473685, 0.09751824817518248]
+drew,criticism    discount   [0, 0, 0]
+his,takeover    discount   [0, 0, 0]
+The,measure    discount   [0, 0, 0]
+parting,shot    discount   [0, 0, 0]
+the,parent    discount   [0, 0, 0]
+the,Bush    discount   [0, 0, 0]
+yesterday,withdrew    discount   [0, 0, 0]
+Trump,who    discount   [0, 0, 0]
+administration,and    discount   [0, 0, 0]
+for,AMR    discount   [0, 0, 0]
+AMR,Corp    discount   [0, 0, 0]
+from,the    discount   [0.5471698113207547, 0.16559542938760935, 0]
+financier,Donald    discount   [0, 0, 0]
+takeover,bid    discount   [0, 0, 0]
+of,American    discount   [0, 0, 0]
+from,financier    discount   [0, 0, 0]
+measure,drew    discount   [0, 0, 0]
+criticism,from    discount   [0, 0, 0]
+Donald,Trump    discount   [0, 0, 0]
+who,yesterday    discount   [0, 0, 0]
+
+Observation:
+In this the 1st element is witten-bell discount
+In this the 2nd element is good-turing discount
+In this the 3rd element is add-one discount
+
+So we can observe that witten-bell > good-turing > add-one discounts. So the results will be good for the ones which has better discounts.

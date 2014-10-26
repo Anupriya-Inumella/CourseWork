@@ -1,0 +1,23 @@
+{{extend 'layout.html'}}
+<h1>Image: {{=images.title}}</h1>
+
+<center>
+<img width="200px"
+     src="{{=URL('download', args=images.image)}}" />
+
+</center>
+{{if len(comments):}}
+
+  <h2>Comments</h2><br /><p>
+  {{for c in comments:}}
+
+    <p>{{=c.author}} says <i>{{=c.comment}}</i></p>
+
+  {{pass}}</p>
+{{else:}}
+
+  <h2>No comments posted yet</h2>
+{{pass}}
+
+<h2>Post a comment</h2>
+{{=form}}

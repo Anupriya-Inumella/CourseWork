@@ -1,0 +1,21 @@
+{{extend 'layout.html'}}
+<h3 style="text-align:center">{{=p.title}}</h3><br/>
+<div style="width:900px;border:1px solid #ccc; background-color:white;padding:5px 5px 0px 5px">
+    <img src="{{=URL('download',args=p.image)}}" style="width:900px;padding:0px"/>
+</div><br/>
+<div style="font-size:30px;margin-left:50px;margin-top:10px">{{=len(l)}}</div>
+ {{if len(db.comments):}}
+
+  <h2>Comments</h2><br /><p>
+  {{for c in db.comments:}}
+
+    <p> <i>{{=c.comment}}</i></p>
+
+  {{pass}}</p>
+{{else:}}
+
+  <h2>No comments posted yet</h2>
+{{pass}}
+
+<h2>Post a comment</h2>
+{{=form}}

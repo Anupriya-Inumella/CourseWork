@@ -1,0 +1,40 @@
+
+        HA: Language Modeling (N-grams and Smoothing)
+        ---------------------------------------------
+
+
+I) Randomly select a text of about 5000 words from any source.  Also
+   select another 1000 words of text corpus from another file. 
+
+2. Ignore all punctuation marks except sentence boundary. ().
+   (a) Prepare a unigram count table. Compute % of coverage, and 
+       probabilities of each unigram. Find the number of types and 
+       tokens.
+   (b) Prepare a bigram count table and bigram probability table. Compute
+       unigram counts from the bigram count table and verify 
+       that the counts are same as in (a)
+
+3. Select 5 sentences (of length 6- 10 words) at random from your corpus. 
+   For all the selected sentences,
+   (i) Find P(S) using (a) Unigram counts.
+                       (b) Bigram counts.
+
+4. For the sentences selected in Q.3, keep the keep the first 3 words, and
+   drop the rest of the words.
+   (i) Select the next 7 words based on maximum bi-gram probability
+       given the  earlier words, and construct the new sentence.
+
+   (ii) Find the probabilily of the constructed sentences.
+
+5.  Select a sentence of 10 to 12 words from your corpus. Extract the part of
+    the bigram counts table created in Q.2 (a) involving the words of
+    this sentence and use it for the following part. 
+
+   a) Carry out Add-one smoothing on bigram counts and find discounts of all
+      bigrams in your table. 
+ 
+
+NOTE: Submit a zip file with the code written, data and a doc/pdf with the findings of the above 5 questions. Follow proper (readable) naming conventions for your files. Points will be deducted if file names are generic (e.g. 1.txt , assign2.doc , nlp.java etc...).
+
+
+

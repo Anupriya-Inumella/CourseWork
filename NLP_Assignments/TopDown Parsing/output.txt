@@ -1,0 +1,174 @@
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+['NP VP ', 'does that flight include a meal', ['det n', 'properN']]
+
+
+
+
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+['NP VP ', 'does that flight include a meal', ['properN']]
+['det n VP', 'does that flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+['NP VP ', 'does that flight include a meal', ['properN']]
+
+
+
+
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+['NP VP ', 'does that flight include a meal', []]
+['properN VP', 'does that flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+['NP VP ', 'does that flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['aux NP VP', 'VP']]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['det n', 'properN']]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', ['v', 'v NP']]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', ['v NP']]
+['v ', 'include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', ['v NP']]
+['', 'a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', ['v NP']]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', []]
+['v NP ', 'include a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', []]
+['v NP ', 'include a meal', []]
+['NP', 'a meal', ['det n', 'properN']]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', []]
+['v NP ', 'include a meal', []]
+['NP', 'a meal', ['properN']]
+['det n ', 'a meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', []]
+['v NP ', 'include a meal', []]
+['NP', 'a meal', ['properN']]
+['det n ', 'a meal', []]
+['n', 'meal', []]
+
+
+
+
+['S', 'does that flight include a meal', ['VP']]
+['aux NP VP ', 'does that flight include a meal', []]
+['NP VP', 'that flight include a meal', ['properN']]
+['det n VP', 'that flight include a meal', []]
+['n VP', 'flight include a meal', []]
+['VP', 'include a meal', []]
+['v NP ', 'include a meal', []]
+['NP', 'a meal', ['properN']]
+['det n ', 'a meal', []]
+['', '', []]
+
+
+
+
+SUCCESS!

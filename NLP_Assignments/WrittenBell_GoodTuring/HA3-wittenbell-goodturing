@@ -1,0 +1,13 @@
+	 HA-3: Smoothing
+	--------------
+
+1. Use the same 5000+1000 word data from previous assignment (HA-2)for this assignment too.
+
+a)  Carry out Witten-Bell smoothing on bigram counts. Find discounted probabilities, the new counts and the discounts for all bigrams. 
+
+b) Carry out Good-Turing smoothing on the bigram counts of less than 4 (i.e. only on bigrams whose counts[r < 4] are less than 4 ).  Find discounted probabilities, the new counts and the discounts for all bigrams. 
+
+c) Compare the bigram discounts in Good-Turing (1.b) with those in Witten-Bell (1.a) and Add-One (from previous assignment) and comment.
+
+
+Deadline: 30th August, 2012

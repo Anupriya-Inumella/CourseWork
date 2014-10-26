@@ -1,0 +1,6 @@
+does	aux
+that 	det
+flight	n
+include	v
+a	det
+meal	n

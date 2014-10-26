@@ -1,0 +1,169 @@
+Q) Given the following grammar and the sentence. Show the various
+    states of the stack during the execution of non-recursive
+    top-down parsing algorithm.
+
+    Grammar:
+
+     S  -> NP VP
+     S  -> VP
+     S  -> aux NP VP
+     NP -> det n
+     NP -> properN
+     VP -> v
+     VP -> v NP
+
+    Sentence:
+
+     does that flight include a meal 
+     ---  ---- ------ ------- - ----
+     aux  det    n       v   det  n
+
+
+
+SOLUTION)
+---------
+
+=================================================================
+
+(1)	S		(does that ...)		S -> NP VP
+						S -> aux NP VP
+						S -> VP
+
+--------------------------------------------------
+
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		NP -> det nom
+						NP -> properN
+
+---------------------------------------------------
+
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		NP -> properN
+(3)	det nom VP	(does that ..)		-
+
+---------------------------------------------------
+
+BACKTRACK
+	
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		-
+(3)	properN VP	(does that ..)		-
+
+---------------------------------------------------
+
+BACKTRACK
+
+(1)	S		(does that ...)		S -> VP
+(2)	aux NP VP	(does that ..)		-
+
+---------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> det nom
+							NP -> properN
+
+-----------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+
+-------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> verb
+							VP -> verb NP
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> verb NP
+(7)	verb 		(include a meal)		-
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> verb NP
+(7)	verb 		(include a meal)		-
+(8)	- 		(a meal)			-
+
+----------------------------------------------------------
+
+BACKTRACK
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	verb NP		(include a meal)		-
+
+----------------------------------------------------------
+
+CONSUME
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	verb NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> det nom
+							NP -> properN
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	verb NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> properN
+(9)	det nom		(a meal)			-
+
+----------------------------------------------------------
+
+CONSUME
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det nom	VP 	(that flight ..)		-
+(5)	nom VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	verb NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> properN
+(9)	det nom		(a meal)			-
+(10)	nom		(meal)				-
+(11)	-		-				-
+
+----------------------------------------------------------
+
+SUCCESS !
+
+

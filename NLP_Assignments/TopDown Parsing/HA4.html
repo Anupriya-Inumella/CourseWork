@@ -1,0 +1,34 @@
+<HTML>
+			<h3>	HA 5 - TOP DOWN PARSING		</h3>
+
+<body>
+<PRE>
+Q) Given the following grammar and the sentence. Write a program to show the various
+   states of the stack during the execution of non-recursive
+   top-down parsing algorithm.
+
+   Grammar:
+
+    S  -> NP VP
+    S  -> aux NP VP
+    S  -> VP
+    NP -> det n
+    NP -> properN
+    VP -> v
+    VP -> v NP
+
+   Sentence:
+
+    does that flight include a meal
+    ---  ---- ------ ------- - ----
+    aux  det    n       v   det  n
+
+
+Psedo Code for the problem <A HREF="Top_Down_Parsing_pseudoCode.txt">Top Down Parsing (Pseudo Code)</A> 
+
+Sample Input <A HREF="inputSentence.txt"> Input Sentence.txt</A>
+	     <A HREF="inputGrammar.txt"> Input Grammar.txt</A>
+Expected Ouput <A HREF="expectedOutput.txt"> Expected Output.txt</A>
+</PRE>
+</BODY>
+</HTML>

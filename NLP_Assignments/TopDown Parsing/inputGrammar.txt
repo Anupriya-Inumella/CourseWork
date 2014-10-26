@@ -1,0 +1,8 @@
+S NP VP
+S aux NP VP
+S VP
+NP det n
+NP properN
+VP v
+VP v NP
+

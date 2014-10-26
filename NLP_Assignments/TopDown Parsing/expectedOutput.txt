@@ -1,0 +1,212 @@
+
+-------------------------------------------------
+
+(1)	S		(does that ...)		S -> NP VP
+						S -> aux NP VP
+						S -> VP
+
+--------------------------------------------------
+
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		NP -> det n
+						NP -> properN
+
+---------------------------------------------------
+
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		NP -> properN
+(3)	det n VP	(does that ..)		-
+
+--------------------------------------------------
+
+BACKTRACK
+
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		NP -> properN
+						-
+
+---------------------------------------------------
+	
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		-
+(3)	properN VP	(does that ..)		-
+
+---------------------------------------------------
+
+BACKTRACK
+	
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+(2)	NP VP		(does that ..)		-
+
+---------------------------------------------------
+
+BACKTRACK
+	
+(1)	S		(does that ...)		S -> aux NP VP
+						S -> VP
+
+---------------------------------------------------
+
+(1)	S		(does that ...)		S -> VP
+(2)	aux NP VP	(does that ..)		-
+
+---------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> det n
+							NP -> properN
+
+-----------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+
+-------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+
+----------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> v
+							VP -> v NP
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> v NP
+(7)	v 		(include a meal)		-
+
+----------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> v NP
+(7)	v 		(include a meal)		-
+(8)	- 		(a meal)			-
+
+----------------------------------------------------------
+
+BACKTRACK
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> v NP
+(7)	v 		(include a meal)		-
+
+----------------------------------------------------------
+
+BACKTRACK
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		VP -> v NP
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	v NP		(include a meal)		-
+
+----------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	v NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> det n
+							NP -> properN
+
+----------------------------------------------------------
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	v NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> properN
+(9)	det n		(a meal)			-
+
+----------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	v NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> properN
+(9)	det n		(a meal)			-
+(10)	n		(meal)				-
+
+----------------------------------------------------------
+
+CONSUME INPUT
+
+(1)	S		(does that ...)			S -> VP
+(2)	aux NP VP	(does that ..)			-
+(3)	NP VP		(that flight ..)		NP -> properN
+(4)	det n	VP 	(that flight ..)		-
+(5)	n VP 		(flight include ..)		-
+(6)	VP 		(include a meal)		-
+(7)	v NP		(include a meal)		-
+(8)	NP		(a meal)			NP -> properN
+(9)	det n		(a meal)			-
+(10)	n		(meal)				-
+(11)	-		-				-
+
+----------------------------------------------------------
+
+SUCCESS !
+
